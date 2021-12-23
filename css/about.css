@@ -1,0 +1,241 @@
+[data-tooltip] {
+    position: relative; /* Относительное позиционирование */ 
+    align-items: center;
+}
+[data-tooltip]::after {
+    font-family: 'Oranienbaum';
+    font-size: 20px;
+    /* align-items: center; */
+    content: attr(data-tooltip); /* Выводим текст */
+    position: absolute; /*Абсолютное позиционирование*/
+    width: 200px; /* Ширина подсказки */
+    height: 200px;
+    border-radius: 50%;
+    left: 50px; top: 0; /* Положение подсказки */
+    /*background-color: var(--main-dark-color); цвет фона*/
+    color: var(--main-light-color); /* Цвет текста */
+    padding-left: 25px;
+    padding-top: 30px; /* Поля вокруг текста */
+    pointer-events: none; /* Подсказка */
+    opacity: 0; /* Подсказка невидима */
+    transition: 1s; /* Время появления подсказки */
+    line-height: 25px;
+} 
+[data-tooltip]:hover::after {
+    opacity: 1; /* Показываем подсказку */
+    margin-top: 630px; /* Положение подсказки */
+}
+.cursor{
+    z-index: 1000;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--main-light-color);
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+a{
+    color: var(--main-light-color);
+}
+body{
+    background-color: var(--main-light-color);
+    overflow-x: hidden;
+}
+.header{
+    padding-top: 30px;
+}
+.main{
+    height: 1500px;
+}
+.container{
+    max-width: 1734px;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+.site-container{
+    overflow: hidden;
+}
+.flex{
+    display: flex;
+}
+.first__about{
+    height: 100vh;
+    min-height: 660px;
+    background-image: url(../img/aboutFon2.jpg);
+    background-position: center;    
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--white-color);
+}
+.first_about_container{
+    position: relative;
+    padding-top: 300px;
+    padding-bottom: 200px;
+    height: 100%;
+    text-align: center;
+}
+.about__descr1{
+    font-family: 'Noto Serif';
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--main-light-color);
+}
+.about__descr2{
+    font-family: 'Noto Serif';
+    font-weight: 400;
+    font-size: 22px;
+    margin-top: 60px;
+    color: var(--main-light-color);
+}
+.title{
+    font-family: 'Oranienbaum';
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--main-light-color);
+}
+.question{
+    padding: 70px;
+    text-align: center;
+    font-family: 'Oranienbaum';
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--main-dark-color);
+}
+.sections__words{
+    background-image: url(/img/wordsSecPic.jpg);
+    height: 600px;
+    /* height: 100vh; */
+}
+.sections__articals{
+    position: relative;
+    background-image: url(/img/mostinfluential.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 600px;
+    /* height: 100vh; */
+}
+.section_words_title, .section_articals_title{
+    padding-top: 400px;
+    font-family: 'Oranienbaum';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: normal;
+    padding-bottom: 40px;
+}
+.words_descr, .articals_descr{
+    font-family: 'Noto Serif';
+    font-weight: normal;
+    font-size: 20px;
+    max-width: 800px;
+    line-height: 30px;
+}
+.arrow {
+    margin-right: 0;
+    border: solid var(--main-light-color);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+
+/*адаптив start*/
+@media (max-width: 992px) {
+    .first_about_container{
+        padding-top: 270px;
+    }
+    .about__descr1, .about__descr2{
+        font-size: 20px;
+    }
+    .question{
+        font-size: 25px;
+    }
+    .words_descr, .articals_descr{
+        font-size: 18px;
+    }
+    .section_words_title, .section_articals_title{
+        font-size: 32px;
+    }
+    [data-tooltip]:hover::after {
+        margin-top: 550px;
+    }
+    .title{
+        font-size: 25px;
+    }
+    .cursor{
+        display: none;
+    }
+}
+@media (max-width: 768px){
+    .about__descr1, .about__descr2{
+        font-size: 16px;
+    }
+    .first_about_container{
+        padding-top: 200px;
+    }
+    .words_descr, .articals_descr{
+        font-size: 15px;
+    }
+    .section_words_title, .section_articals_title{
+        font-size: 30px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    [data-tooltip]::after {
+        font-size: 17px;
+    }
+    .first_about_container{
+        padding-top: 250px;
+    }
+    .question{
+        font-size: 22px;
+    }
+}
+@media (max-width: 375px) {
+    .first_about_container{
+        padding-top: 170px;
+    }
+    .about__descr1, .about__descr2{
+        font-size: 15px;
+        margin-top: 60px;
+    }
+    .question{
+        font-size: 20px;
+    }
+    .words_descr, .articals_descr{
+        line-height: 70px;
+    }
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    [data-tooltip]::after {
+        padding-left: 0;
+        font-size: 15px;
+    }
+    .section_words_title, .section_articals_title{
+        font-size: 27px;
+        padding-top: 300px;
+        padding-bottom: 0;
+    }
+    .question{
+        padding: 40px;
+    }
+    .sections__words, .sections__articals{
+        height: 400px;
+    }
+    .words_descr, .articals_descr{
+        display: none;
+    }
+    .arrow{
+        margin-left: 280px;
+    }
+}
+
+/*адаптив end*/

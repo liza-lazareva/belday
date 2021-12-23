@@ -1,0 +1,55 @@
+:root{
+    --main-light-color: #F0F0F0;
+}
+:root{
+    --main-dark-color: #0E0B06;
+}
+@font-face {
+    font-family: 'Oranienbaum';
+    src: url(/fonts/OranienbaumRegular.ttf);
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Paper';
+    src: url(/fonts/Paper.otf);
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Serif';
+    src: url(/fonts/NotoSerifRegular.ttf);
+    font-display: swap;
+    font-style: normal;
+}
+.cursor{
+    z-index: 1000;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: var(--main-dark-color); 
+    opacity: 0.9;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-light-color); 
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+background-color: var(--main-light-color);} */

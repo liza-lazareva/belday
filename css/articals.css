@@ -1,0 +1,103 @@
+body{
+    overflow-x: hidden;
+}
+.header{
+    padding-top: 30px;
+}
+.flex{
+    display: flex;
+}
+.cursor{
+    z-index: 1000;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+.container{
+    max-width: 1734px;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+.blocks__articals{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+} 
+.artic{
+    position: relative;
+    height: 100vh;
+    width: 34vw; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title__artical{
+    font-family: 'Noto Serif';
+    position: absolute;
+    font-size: 30px;
+    font-weight: 400;
+    top: 50%;
+    margin-left: 50px;
+    margin-top: 150px;
+    color: var(--main-light-color);
+}
+.source__artical{
+    position: absolute;
+    font-family: 'Oranienbaum';
+    font-size: 20px;
+    font-weight: 400;
+    top: 60%;
+    margin-left: 50px;
+    margin-top: 150px;
+    color: var(--main-light-color);
+
+}
+/*.artic1{
+    background-image: url(/img/zmrochnaArtic.jpg);
+}
+.artic2{
+    background-image: url(/img/savitskiArtic.jpg);
+}
+.artic3{
+    background-image: url(/img/dysaniaArtic.jpg);
+}
+.artic4{
+    background-image: url(/img/ponificArtic.jpg);
+}
+.artic5{
+    background-image: url(/img/ayradpiArtic.jpg);
+}
+.artic6{
+    background-image: url(/img/booksArtic2.jpg);
+}
+*/
+
+@media (max-width: 992px) {
+    .cursor{
+        display: none;
+    }
+    .artic{
+        height: 105vh;
+    }
+   
+}
+@media (max-width: 768px){
+    .blocks__articals{
+        display: block;
+    }
+    .artic{
+        width: 100vw;
+    }
+}
+@media (max-width: 400px) {
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

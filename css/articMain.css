@@ -1,0 +1,223 @@
+body{
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
+}
+.cursor{
+    z-index: 1000;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+.container{
+    max-width: 1734px;
+    padding: 0 80px;
+    margin: 0 auto;
+}
+.header__container{
+    padding-top: 30px;
+}
+.site-container{
+    overflow: hidden;
+}
+.flex{
+    display: flex;
+}
+.author{
+    display: flex;
+    justify-content: space-between;
+    /* height: 600px; */
+    margin-top: 30px;
+}
+.text{
+    display: flex;
+    max-width: 1734px;
+    justify-content: space-between;
+    width: 45%;
+    /* height: 600px; */
+    margin-right: 20px;
+}
+.block__top{
+    /* height: 450px; */
+    justify-content: space-between;
+    font-family: 'Oranienbaum';
+    font-size: 24px;
+}
+.block__bototom{
+    font-family: 'Oranienbaum';
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.author__name{
+    font-family: 'Oranienbaum';
+    font-size: 24px;
+}
+.author__img{
+    display: flex;
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*слайдер начало*/
+/* Собственно сам слайдер */
+.slider{
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+    height: 700px;
+    margin-top: 100px;
+    margin-bottom: 25px;
+}
+/* Картинка мастабируется по отношению к родительскому элементу */
+.slider .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 700px;
+    border: none !important;
+    box-shadow: none !important;
+}
+/* Кнопки вперед и назад */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--main-dark-color);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s;
+    border-radius: 0 3px 3px 0;
+}
+.slider .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+/* При наведении на кнопки добавляем фон кнопок */
+/* .slider .prev:hover,
+.slider .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+} */
+
+/* Анимация слайдов */
+.slider .item {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+/*слайдер конец*/
+
+@media (max-width: 992px) {
+    .author{
+        margin-top: 70px;
+    }
+    .block__bototom{
+        font-size: 18px;
+    }
+    .author__name, .block__top{
+        font-size: 22px;
+    }
+    .cursor{
+        display: none;
+    }
+}
+@media (max-width: 877px){
+    .text{
+        width: 300px;
+    }
+    .author__img{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media (max-width: 768px){
+    .text{
+        width: 100%;
+        padding-right: 0;
+        margin-bottom: 50px;
+    }
+    .author{
+        display: block;
+        margin-top: 180px;
+    }
+    .block__bototom{
+        margin-top: 100px;
+    }
+    .slider{
+        display: block;
+    }
+    .author__img{
+        width: 565px;
+        height: 565px;
+    }
+}
+@media (max-width: 635px){
+    .text{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+    .block__bototom{
+        margin-top: 40px;
+    }
+    .author__img{
+        width: 480px;
+        height: 480px;
+    }
+}
+@media (max-width: 570px){
+    .author__img{
+        width: 300px;
+        height: 300px;
+    }
+}
+@media (max-width: 400px) {
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media (max-width: 376px) {
+    .author{
+        margin-top: 150px;
+    }
+    .text{
+
+    }
+    .block__top{
+        font-size: 17px;
+    }
+    .author__name{
+        font-size: 18px;
+    }
+    .block__bototom{
+        font-size: 15px;
+    }
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+@media (max-width: 281px) {
+    .author__img{
+        width: 200px;
+        height: 200px;
+    }
+}
+
